@@ -87,31 +87,36 @@ class _PlantPageBodyState extends State<PlantPageBody> {
             "type": "Indoor Plants",
             "name": "Peace lily",
             "distance": "1.7km",
-            "time":"3days"
+            "time":"3days",
+            "image":"assets/images/img1.jpeg"
         },
         {
             "type": "Outdoor Plants",
             "name": "Peace lily",
             "distance": "3.4km",
-            "time":"2-3days"
+            "time":"2-3days",
+            "image":"assets/images/img2.jpeg"
         },
         {
             "type": "Hanging Plants",
             "name": "Peace lily",
             "distance": "1km",
-            "time":"1-2days"
+            "time":"1-2days",
+            "image":"assets/images/img3.jpeg"
         },
         {
             "type": "succulents",
             "name": "Peace lily",
             "distance": "4km",
-            "time":"3-4days"
+            "time":"3-4days",
+            "image":"assets/images/img1.jpeg"
         },
         {
             "type": "Water Plants",
             "name": "Peace lily",
             "distance": "1.2km",
-            "time":"1-2days"
+            "time":"1-2days",
+            "image":"assets/images/img1.jpeg"
         }
         
     ];
@@ -160,7 +165,7 @@ class _PlantPageBodyState extends State<PlantPageBody> {
               image: DecorationImage(
                 fit: BoxFit.cover,
                 image: AssetImage(
-                  "assets/images/img1.jpeg"
+                  categories[index]["image"].toString()
               ))
             ),
           ),
