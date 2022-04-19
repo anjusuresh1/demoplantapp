@@ -1,9 +1,12 @@
 import 'dart:io';
 
+import 'package:demoplantdelapp/pages/home/main_plant_page.dart';
 import 'package:demoplantdelapp/widgets/dimensions.dart';
 import 'package:demoplantdelapp/widgets/expandable_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/basic.dart';
+import 'package:get/get.dart';
+import 'package:get/instance_manager.dart';
 
 import '../../../widgets/app_column.dart';
 import '../../../widgets/app_icon.dart';
@@ -46,7 +49,12 @@ class PopularPlantDetail extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              AppIcon(icon: Icons.arrow_back_ios),
+              GestureDetector(
+                onTap:() {
+                  Get.to(() =>MainPlantPage());
+                },
+              child:
+              AppIcon(icon: Icons.arrow_back_ios)),
               AppIcon(icon: Icons.add_shopping_cart_outlined)
 
 
