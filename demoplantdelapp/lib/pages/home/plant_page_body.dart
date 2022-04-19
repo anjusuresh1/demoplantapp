@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:demoplantdelapp/pages/home/plant/popular_plant_detail.dart';
 import 'package:demoplantdelapp/widgets/app_column.dart';
 import 'package:demoplantdelapp/widgets/big_text.dart';
 import 'package:demoplantdelapp/widgets/icons_and_text_widget.dart';
@@ -8,6 +9,8 @@ import 'package:demoplantdelapp/widgets/dimensions.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:get/get.dart';
+import 'package:get/instance_manager.dart';
 
 class PlantPageBody extends StatefulWidget {
   const PlantPageBody({ Key? key }) : super(key: key);
@@ -159,7 +162,11 @@ class _PlantPageBodyState extends State<PlantPageBody> {
         Container(
           // color: Colors.redAccent,
           height: Dimensions.pageView,
-          child: PageView.builder(
+          child: GestureDetector(
+            onTap: (){
+              Get.to(()=>PopularPlantDetail());
+            },
+            child: PageView.builder(
             controller: pageController,
               itemCount: categories.length,
               itemBuilder: (context, index){
@@ -213,6 +220,8 @@ class _PlantPageBodyState extends State<PlantPageBody> {
         ],
       );
           }),
+          ),
+          
         ),
         //dots
         new DotsIndicator(
