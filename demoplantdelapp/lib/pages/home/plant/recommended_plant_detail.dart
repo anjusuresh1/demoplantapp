@@ -1,10 +1,12 @@
 import 'package:demoplantdelapp/pages/home/plant/popular_plant_detail.dart';
+import 'package:demoplantdelapp/routes/route_helper.dart';
 import 'package:demoplantdelapp/widgets/app_icon.dart';
 import 'package:demoplantdelapp/widgets/expandable_text_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../../widgets/big_text.dart';
 import '../../../widgets/dimensions.dart';
+import 'package:get/get.dart';
 
 class RecommendedPlantDetail extends StatelessWidget {
   const RecommendedPlantDetail({ Key? key }) : super(key: key);
@@ -16,11 +18,18 @@ class RecommendedPlantDetail extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
+            automaticallyImplyLeading: false,
             toolbarHeight: 70,
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                AppIcon(icon: Icons.clear),
+              
+                GestureDetector(
+                  onTap: () {
+                    Get.toNamed(RouteHelper.initial);
+                  },
+                  child: AppIcon(icon: Icons.clear),
+                ),
                 AppIcon(icon: Icons.shopping_cart_outlined)
               ],
             ),

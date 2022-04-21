@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:demoplantdelapp/controllers/popular_product_controller.dart';
 import 'package:demoplantdelapp/pages/home/main_plant_page.dart';
 import 'package:demoplantdelapp/widgets/dimensions.dart';
 import 'package:demoplantdelapp/widgets/expandable_text_widget.dart';
@@ -16,11 +17,14 @@ import '../../../widgets/small_text.dart';
 
 
 class PopularPlantDetail extends StatelessWidget {
-  const PopularPlantDetail ({ Key? key }) : super(key: key);
+  int pageId;
+  PopularPlantDetail ({ Key? key,required this.pageId }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
- 
+    var product= Get.find<PopularProductController>().popularProductList[pageId];
+    //print("page is id"+pageId.toString());
+    //print("product name is"+product.name.toString());
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 247, 247, 247),
       body:Stack(

@@ -26,12 +26,6 @@ class AppColumn extends StatelessWidget {
                         Wrap(
                           children: List.generate(5, (index) => Icon(Icons.star, color: Color(0xFF89dad0),size: 15,)),
                         ),
-                        SizedBox(width: 10,),
-                        SmallText(text: "4.5"),
-                        SizedBox(width:10,),
-                        SmallText(text: "1287"),
-                        SizedBox(width: 10,),
-                        SmallText(text: "comments")
                       ],
                     ),
                     SizedBox(height: Dimensions.height20,),

@@ -3,6 +3,7 @@ import 'package:demoplantdelapp/pages/home/main_plant_page.dart';
 import 'package:demoplantdelapp/pages/home/plant/popular_plant_detail.dart';
 import 'package:demoplantdelapp/pages/home/plant/recommended_plant_detail.dart';
 import 'package:demoplantdelapp/pages/home/plant_page_body.dart';
+import 'package:demoplantdelapp/routes/route_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart'; 
 import 'helper/dependencies.dart' as dep;
@@ -21,10 +22,10 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp( 
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      
       home: MainPlantPage(),
+      initialRoute: RouteHelper.initial,
+      getPages: RouteHelper.routes,
     );
   }
 }
